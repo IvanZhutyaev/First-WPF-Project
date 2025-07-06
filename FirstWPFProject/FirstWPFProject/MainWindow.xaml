@@ -7,41 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="500">
     
-      <Grid>
-          <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="*"/>
-              <ColumnDefinition  Width="Auto"/>
-              <ColumnDefinition Width="*"/>
-
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-              <RowDefinition Height="*"></RowDefinition>
-              <RowDefinition Height="Auto"></RowDefinition>
-              <RowDefinition Height="*"></RowDefinition>
-              <RowDefinition Height="Auto"></RowDefinition>
-              <RowDefinition Height="*"></RowDefinition>
-              <RowDefinition Height="Auto"></RowDefinition>
-              <RowDefinition Height="*"></RowDefinition>
-              <RowDefinition Height="Auto"></RowDefinition>
-              <RowDefinition Height="*"></RowDefinition>
-          </Grid.RowDefinitions>
-          
-         
-          <Button Grid.Column="0" Grid.Row="0" Background="Red" Click="Red"/>
-          <Button Grid.Column="0" Grid.Row="2" Background="Green" Click="Green"/>
-          <Button Grid.Column="0" Grid.Row="4" Background="Blue" Click="Blue"/>
-          <Button Grid.Column="0" Grid.Row="6" Background="Yellow" Click="Yellow"/>
-          <Button Grid.Column="0" Grid.Row="8" Background="Purple" Click="Purple"/>
-          
-          <GridSplitter Grid.Row="0" Grid.RowSpan="10" Grid.Column="1" ShowsPreview = "False" Width="3"
-                        HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-          <GridSplitter Grid.Row="1" Grid.Column="0" ShowsPreview = "False" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-          <GridSplitter Grid.Row="3" Grid.Column="0" ShowsPreview = "False" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-          <GridSplitter Grid.Row="5" Grid.Column="0" ShowsPreview = "False" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-          <GridSplitter Grid.Row="7" Grid.Column="0" ShowsPreview = "False" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-          
-          <Button  x:Name = "ColorfullBtn" Background="White" Grid.Column="2" Grid.Row="0" Grid.RowSpan = "10"/>
-          
-          
+      <Grid x:Name="Grid">
+          <Button Width="60" Height="30" Margin="0 0 0 0 " Content="CLICK!!!" Click="Spawn_ten_btns"/>
       </Grid>
 </Window>

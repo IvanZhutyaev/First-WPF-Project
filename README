@@ -14,3 +14,5 @@ HorizontalAlignment - горизонтальное выравнивание эл
 VerticalAlignment - вертикальное выравнивание элементов (Top, Bottom, Center, Stretch)
 
 Отступы - margin(Left Top Right Bottom)(0 0 20 10)
+
+Panel.ZIndex - слои(чем выше номер, тем выше он будет находится)

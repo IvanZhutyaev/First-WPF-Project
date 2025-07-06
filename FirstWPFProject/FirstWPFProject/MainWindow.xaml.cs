@@ -21,24 +21,22 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void Red(object sender, RoutedEventArgs e)
+    
+
+    private void Spawn_ten_btns(object sender, RoutedEventArgs e)
     {
-        ColorfullBtn.Background= new SolidColorBrush(Colors.Red);
-    }
-    private void Green(object sender, RoutedEventArgs e)
-    {
-        ColorfullBtn.Background= new SolidColorBrush(Colors.Green);
-    }
-    private void Blue(object sender, RoutedEventArgs e)
-    {
-        ColorfullBtn.Background= new SolidColorBrush(Colors.Blue);
-    }
-    private void Yellow(object sender, RoutedEventArgs e)
-    {
-        ColorfullBtn.Background= new SolidColorBrush(Colors.Yellow);
-    }
-    private void Purple(object sender, RoutedEventArgs e)
-    {
-        ColorfullBtn.Background= new SolidColorBrush(Colors.Purple);
+        for (int i = 0; i < 10; i++)
+        {
+            
+            Button myButton = new Button();
+            myButton.Width = 60;
+            myButton.Height = 30;
+            myButton.Margin = new Thickness(10+i*10, 10+i*10, 10, 10);
+            Panel.SetZIndex(myButton, i);
+            myButton.Content = "Button";
+            myButton.Click+=Spawn_ten_btns;
+            Grid.Children.Add(myButton);
+            
+        }
     }
 }
