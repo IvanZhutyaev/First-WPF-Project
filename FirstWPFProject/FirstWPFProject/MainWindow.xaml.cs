@@ -33,10 +33,18 @@ public partial class MainWindow : Window
             myButton.Height = 30;
             myButton.Margin = new Thickness(10+i*10, 10+i*10, 10, 10);
             Panel.SetZIndex(myButton, i);
-            myButton.Content = "Button";
-            myButton.Click+=Spawn_ten_btns;
+            myButton.Content = $"Button+{i}";
+            myButton.Click+=WriteName;
             Grid.Children.Add(myButton);
             
         }
     }
+
+    private void WriteName(object sender, RoutedEventArgs e)
+    {
+        var btn = sender as Button;
+        MessageBox.Show(btn.Content.ToString());
+    }
+    
+    
 }
