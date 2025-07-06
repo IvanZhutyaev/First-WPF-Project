@@ -5,29 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" /> 
-            <ColumnDefinition Width="Auto" /> 
-            <ColumnDefinition Width="*" /> 
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" /> 
-            <RowDefinition Height="Auto" /> 
-            <RowDefinition Height="*" /> 
-        </Grid.RowDefinitions>
-        <GridSplitter Grid.Column="1" Grid.Row="0" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-        <GridSplitter Grid.Column="1" Grid.ColumnSpan="3"  Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-        
-        <Canvas Grid.Column="0" Grid.Row="0" Background="Bisque">
-            <TextBlock>Левая панель</TextBlock>
-        </Canvas>
-        <Canvas Grid.Column="2" Grid.Row="0" Background="Aquamarine">
-            <TextBlock>Правая панель</TextBlock>
-        </Canvas>
-        <Canvas Grid.ColumnSpan="3" Grid.Row="2" Background="Chartreuse">
-            <TextBlock Canvas.Left="60">Нижняя панель</TextBlock>
-        </Canvas>
-    </Grid>
+        Title="MainWindow" Height="300" Width="300">
+    <StackPanel>
+        <Button Background="Blue"  MinWidth="30" Content="1"/>
+        <Button Background="White"  MinWidth="30" Content="2"/>
+        <Button Background="Red"  MinWidth="30" Content="3"/>
+
+
+    </StackPanel>
 </Window>
