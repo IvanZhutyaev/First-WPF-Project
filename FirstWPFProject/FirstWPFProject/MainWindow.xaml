@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1200">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" /> 
+            <ColumnDefinition Width="Auto" /> 
+            <ColumnDefinition Width="*" /> 
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Content="Левая Кнопка"/>
+        <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+        <Button Grid.Column="2" Content="Правая кнопка"/>
     </Grid>
 </Window>
