@@ -8,3 +8,9 @@ Canvas - размещает элементы относительно сторо
 Свойства компоновки элементов:
 MinWidth/MaxWidth
 MinHeight/MaxHeight
+
+Выравнивание:
+HorizontalAlignment - горизонтальное выравнивание элементов (Left, Right, Center, Stretch)
+VerticalAlignment - вертикальное выравнивание элементов (Top, Bottom, Center, Stretch)
+
+Отступы - margin(Left Top Right Bottom)(0 0 20 10)
