@@ -5,17 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
+        Title="MainWindow" Height="1200" Width="1200">
     <Grid>
-        <Canvas>
-            <Button Background="AliceBlue" Content="Top 20 Left 40" Canvas.Top="20" Canvas.Left="40" />
-            <Button Background="LightSkyBlue" Content="Top 20 Right 20" Canvas.Top="20" Canvas.Right="20" />
-            <Button Background="Aquamarine" Content="Bottom 30 Left 20" Canvas.Bottom="30" Canvas.Left="20" />
-            <Button Background="LightCyan" Content="Bottom 20 Right 40" Canvas.Bottom="20" Canvas.Right="40" />
-
-            
-
-        </Canvas>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="100"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*" MinWidth="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+ 
+        <GridSplitter Grid.Column="1" 
+                      Grid.Row="0" 
+                      Grid.RowSpan="5"
+                      Width="3" 
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      ShowsPreview="False"
+                      Background="Gray"/>
+        
+        <Button Grid.Column="0" Grid.Row="0" Background="Red" Click="Red"/>
+        <Button Grid.Column="0" Grid.Row="1" Background="Green" Click="Green"/>
+        <Button Grid.Column="0" Grid.Row="2" Background="Blue" Click="Blue"/>
+        <Button Grid.Column="0" Grid.Row="3" Background="Yellow" Click="Yellow"/>
+        <Button Grid.Column="0" Grid.Row="4" Background="Purple" Click="Purple"/>
+          
+        <Button x:Name="ColorfullBtn" 
+                Grid.Column="2" 
+                Grid.Row="0" 
+                Grid.RowSpan="5" 
+                Background="White"/>
     </Grid>
-
 </Window>

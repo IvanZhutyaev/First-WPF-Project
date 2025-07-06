@@ -20,4 +20,25 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+
+    private void Red(object sender, RoutedEventArgs e)
+    {
+        ColorfullBtn.Background= new SolidColorBrush(Colors.Red);
+    }
+    private void Green(object sender, RoutedEventArgs e)
+    {
+        ColorfullBtn.Background= new SolidColorBrush(Colors.Green);
+    }
+    private void Blue(object sender, RoutedEventArgs e)
+    {
+        ColorfullBtn.Background= new SolidColorBrush(Colors.Blue);
+    }
+    private void Yellow(object sender, RoutedEventArgs e)
+    {
+        ColorfullBtn.Background= new SolidColorBrush(Colors.Yellow);
+    }
+    private void Purple(object sender, RoutedEventArgs e)
+    {
+        ColorfullBtn.Background= new SolidColorBrush(Colors.Purple);
+    }
 }
