@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="300">
-    <WrapPanel>
-        <Button Background="AliceBlue" Content="Кнопка 1" />
-        <Button Background="Blue" Content="Кнопка 2" />
-        <Button Background="Aquamarine" Content="Кнопка 3" Height="30"/>
-        <Button Background="DarkGreen" Content="Кнопка 4" Height="20"/>
-        <Button Background="LightGreen" Content="Кнопка 5"/>
-        <Button Background="RosyBrown" Content="Кнопка 6" Width="80" />
-        <Button Background="GhostWhite" Content="Кнопка 7" />
-    </WrapPanel>
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <Canvas>
+            <Button Background="AliceBlue" Content="Top 20 Left 40" Canvas.Top="20" Canvas.Left="40" />
+            <Button Background="LightSkyBlue" Content="Top 20 Right 20" Canvas.Top="20" Canvas.Right="20" />
+            <Button Background="Aquamarine" Content="Bottom 30 Left 20" Canvas.Bottom="30" Canvas.Left="20" />
+            <Button Background="LightCyan" Content="Bottom 20 Right 40" Canvas.Bottom="20" Canvas.Right="40" />
+
+            
+
+        </Canvas>
+    </Grid>
 
 </Window>
