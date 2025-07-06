@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
-    <StackPanel>
-        <Button Background="Blue"  MinWidth="30" Content="1"/>
-        <Button Background="White"  MinWidth="30" Content="2"/>
-        <Button Background="Red"  MinWidth="30" Content="3"/>
-
-
-    </StackPanel>
+        Title="MainWindow" Height="250" Width="300">
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top" Background="AliceBlue" Content="Верхняя кнопка" />
+        <Button DockPanel.Dock="Bottom" Background="BlanchedAlmond" Content="Нижняя кнопка" />
+        <Button DockPanel.Dock="Left" Background="Aquamarine" Content="Левая кнопка" />
+        <Button DockPanel.Dock="Right" Background="DarkGreen" Content="Правая кнопка" />
+        <Button  Background="LightGreen" Content="Центр" />
+    </DockPanel>
 </Window>
