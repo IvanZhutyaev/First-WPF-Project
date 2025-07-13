@@ -54,5 +54,4 @@ Padding - отступ контента
 
 <Button x:Name="btn1" Padding="1 1 1 1" HorizontalContentAlignment="Left />
 
-
 У кнопки также есть два свойства - IsDefault(Enter) и IsCanсel(Esc)
