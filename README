@@ -47,3 +47,5 @@ Button->Content->StringName(или что-то ещё)
 Children.Add - используется для добавления вложенных элементов только для контейнеров компоновки
 
 .Content - используется для добавления я вложенных элементов в элементы управления(button, label, checkbox и т.д.)
+
+Content Alignment - Vertical/Horizontal
