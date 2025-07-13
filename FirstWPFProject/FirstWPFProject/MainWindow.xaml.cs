@@ -20,13 +20,14 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         StackPanel stackPanel = new StackPanel();
-        Button squareButton = new Button() {Width = 100, Height = 100, HorizontalAlignment = HorizontalAlignment.Right, VerticalAlignment = VerticalAlignment.Center, Padding = new Thickness(0), VerticalContentAlignment = VerticalAlignment.Center };
+        Button squareButton = new Button() {IsDefault = true,IsCancel = true,  Width = 100, Height = 100, HorizontalAlignment = HorizontalAlignment.Right, VerticalAlignment = VerticalAlignment.Center, Padding = new Thickness(0), VerticalContentAlignment = VerticalAlignment.Center };
         Button squareButton1 = new Button()
         {
             Width = 50, Height = 50, HorizontalAlignment = HorizontalAlignment.Right,
             VerticalAlignment = VerticalAlignment.Center, Padding = new Thickness(0),
             VerticalContentAlignment = VerticalAlignment.Center
         };
+        squareButton.Click += Button_Clicl;
         squareButton.Content = squareButton1;
         stackPanel.Children.Add(squareButton);
         StackPanel stackPanel1 = new StackPanel(){Orientation = Orientation.Vertical, Margin = new Thickness(0), HorizontalAlignment = HorizontalAlignment.Left, VerticalAlignment = VerticalAlignment.Center, Width = 300, Height = 300, Background = new SolidColorBrush(Color.FromRgb(155, 255, 255))};
@@ -42,7 +43,11 @@ public partial class MainWindow : Window
 
 
     }
-    
-    
-    
+
+    private void Button_Clicl(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("wsswsw");
+    }
+
+
 }
