@@ -16,3 +16,6 @@ VerticalAlignment - вертикальное выравнивание элеме
 Отступы - margin(Left Top Right Bottom)(0 0 20 10)
 
 Panel.ZIndex - слои(чем выше номер, тем выше он будет находится)
+
+Свойство FieldModifier задаёт модификатор доступа к объекту:
+<Button x:FieldModifier="internal" x:Name="lol" Content="Hello World" />
