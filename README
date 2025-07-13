@@ -33,3 +33,6 @@ FontStretch - определяет, как будет растягивать и
 
 Cursor - свойство позволяет нам получить или установить курсор для элемента управление в одно из значений
 button1.Cursor=Cursors.Hand
+
+button1.Background = New SolidColorBrush(Colors.Red) = задний фон
+button1.Foreground = New SolidColorBrush(Colors.Red) = шрифт
