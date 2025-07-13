@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="10000" Width="10000">
+        Title="MainWindow" Height="250" Width="300">
     
-      
+      <StackPanel>
+          <TextBox x:Name="textBlock" Background="Aqua" Height="40" Text="Hello World!"></TextBox>
+          <Button x:Name="acceptButton" Content="OK" IsDefault="True" Click="acceptButton_Click"/>
+          <Button x:Name="escButton" Content="Exit" IsCancel="True" Click="escButton_Click"/>
+            
+      </StackPanel>
 </Window>

@@ -19,35 +19,16 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        StackPanel stackPanel = new StackPanel();
-        Button squareButton = new Button() {IsDefault = true,IsCancel = true,  Width = 100, Height = 100, HorizontalAlignment = HorizontalAlignment.Right, VerticalAlignment = VerticalAlignment.Center, Padding = new Thickness(0), VerticalContentAlignment = VerticalAlignment.Center };
-        Button squareButton1 = new Button()
-        {
-            Width = 50, Height = 50, HorizontalAlignment = HorizontalAlignment.Right,
-            VerticalAlignment = VerticalAlignment.Center, Padding = new Thickness(0),
-            VerticalContentAlignment = VerticalAlignment.Center
-        };
-        squareButton.Click += Button_Clicl;
-        squareButton.Content = squareButton1;
-        stackPanel.Children.Add(squareButton);
-        StackPanel stackPanel1 = new StackPanel(){Orientation = Orientation.Vertical, Margin = new Thickness(0), HorizontalAlignment = HorizontalAlignment.Left, VerticalAlignment = VerticalAlignment.Center, Width = 300, Height = 300, Background = new SolidColorBrush(Color.FromRgb(155, 255, 255))};
-
-        Button squareButton3 = new Button() {Width = 100, Height = 100, HorizontalAlignment = HorizontalAlignment.Left, VerticalAlignment = VerticalAlignment.Center, Padding = new Thickness(0), VerticalContentAlignment = VerticalAlignment.Center };
-
-        stackPanel1.Children.Add(squareButton3);
-        stackPanel.Children.Add(stackPanel1);
-        window.AddChild(stackPanel);
-        
-        
-        
-
-
     }
 
-    private void Button_Clicl(object sender, RoutedEventArgs e)
+    void acceptButton_Click(object sender, RoutedEventArgs e)
     {
-        MessageBox.Show("wsswsw");
+        MessageBox.Show(textBlock.Text);
     }
 
-
+    void escButton_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("ГАЛЯ ОТМЕНА!!!");
+        textBlock.Text = "";
+    }
 }
