@@ -20,7 +20,7 @@
           
           <StackPanel Grid.Column="1" Background="LightGreen">
               <Button Visibility="Hidden" Content="панель Hidden" />
-              <Button Height="20" Content="Visibility Button" />
+              <Button x:Name="button" Height="20" Content="Visibility Button" />
           </StackPanel>
       </Grid>
 </Window>

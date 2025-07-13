@@ -19,32 +19,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        button.Cursor=Cursors.Hand;
     }
-
-    
-
-    private void Spawn_ten_btns(object sender, RoutedEventArgs e)
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            
-            Button myButton = new Button();
-            myButton.Width = 60;
-            myButton.Height = 30;
-            myButton.Margin = new Thickness(10+i*10, 10+i*10, 10, 10);
-            Panel.SetZIndex(myButton, i);
-            myButton.Content = $"Button+{i}";
-            myButton.Click+=WriteName;
-            Grid.Children.Add(myButton);
-            
-        }
-    }
-
-    private void WriteName(object sender, RoutedEventArgs e)
-    {
-        var btn = sender as Button;
-        MessageBox.Show(btn.Content.ToString());
-    }
-    
     
 }
