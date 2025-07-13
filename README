@@ -36,3 +36,9 @@ button1.Cursor=Cursors.Hand
 
 button1.Background = New SolidColorBrush(Colors.Red) = задний фон
 button1.Foreground = New SolidColorBrush(Colors.Red) = шрифт
+
+Свойство Content - вложенный контент
+Фактически иерархия:
+Button->Content->StringName(или что-то ещё)
+
+В ОТЛИЧИЕ ОТ КОНТЕЙНЕРОВ КОМПОНОВКИ ДЛЯ ЭЛЕМЕНТОВ УПРАВЛЕНИЯ СОДЕРЖИМЫМ МЫ МОЖЕМ ЗАДАТЬ ТОЛЬКО ОДИН ВЛОЖЕННЫЙ ЭЛЕМЕНТ
