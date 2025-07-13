@@ -49,3 +49,10 @@ Children.Add - используется для добавления вложен
 .Content - используется для добавления я вложенных элементов в элементы управления(button, label, checkbox и т.д.)
 
 Content Alignment - Vertical/Horizontal
+
+Padding - отступ контента
+
+<Button x:Name="btn1" Padding="1 1 1 1" HorizontalContentAlignment="Left />
+
+
+У кнопки также есть два свойства - IsDefault(Enter) и IsCanсel(Esc)
