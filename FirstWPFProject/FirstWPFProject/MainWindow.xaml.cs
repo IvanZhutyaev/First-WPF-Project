@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Microsoft.VisualBasic;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -11,21 +12,31 @@ using System.Windows.Shapes;
 
 namespace FirstWPFProject;
 
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class MainWindow : Window
 {
+ 
     public MainWindow()
     {
         InitializeComponent();
+
     }
 
 
 
     private void TextBox_KeyDown(object sender, KeyEventArgs e)
     {
-        textBlock1.Text += e.Key.ToString();
+        if (e.Key == Key.Back)
+        {
+            
+            textBlock1.Text = textBlock1.Text.Substring(0, e.Key.ToString().Length - 1); ;
+        }
+        else
+        {
+            textBlock1.Text += e.Key.ToString();
+            
+        }
+        
+        
     }
 
 
