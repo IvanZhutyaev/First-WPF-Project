@@ -23,11 +23,12 @@ public partial class MainWindow : Window
 
     
 
-    private void Control_MouseDown(object sender, MouseEventArgs e)
+    private void RadioButton_Click(object sender, RoutedEventArgs e)
     {
-        textBlock1.Text = textBlock1.Text + Name;
-        textBlock2.Text = textBlock1.Text + Name;
-        textBlock3.Text = textBlock1.Text + Name;
+        RadioButton selectedRadio = (RadioButton)e.Source;
+        textBlock1.Text="Вы выбрали:"+selectedRadio.Content.ToString();
 
     }
+
+   
 }

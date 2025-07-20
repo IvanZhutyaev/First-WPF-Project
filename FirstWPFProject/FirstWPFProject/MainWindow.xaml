@@ -11,10 +11,14 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" VerticalAlignment="Center" PreviewMouseDown="Control_MouseDown">
-            <Button x:Name="button1" Width="80" Height="50" PreviewMouseDown="Control_MouseDown" Margin="10">
-                <Ellipse Width="30" Height ="30" Fill="Red" PreviewMouseDown="Control_MouseDown" />
-            </Button>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" >
+            <StackPanel x:Name="menuSelector" Grid.Column="0" RadioButton.Checked="RadioButton_Click">
+                <RadioButton GroupName="menu" Content="Салат Оливье"/>
+                <RadioButton GroupName="menu" Content="Котлета по-киевски"/>
+
+                <RadioButton GroupName="menu" Content="Пицца с овощами"/>
+                <RadioButton GroupName="menu" Content="Мясной рулет"/>
+            </StackPanel>
             <TextBlock x:Name="textBlock1" Grid.Column="1" Padding="5"/>
             
         </StackPanel>
