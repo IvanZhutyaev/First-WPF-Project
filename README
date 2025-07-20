@@ -71,4 +71,14 @@ Handled-если это устройство  установлено True, со�
 
 
 
+Прикрепляемые события - если у нас несколько элементов одного типа  и мы хотим прикрепить к ним одно событие
+Пример:
+<StackPanel x:Name="menuSelector" Grid.Column="0" RadioButton.Checked="RadioButton_Click">
+    <RadioButton GroupName="menu" Content="Салат Оливье"/>
+    <RadioButton GroupName="menu" Content="Котлета по-киевски"/>
 
+    <RadioButton GroupName="menu" Content="Пицца с овощами"/>
+    <RadioButton GroupName="menu" Content="Мясной рулет"/>
+</StackPanel>
+
+menuSelector.AddHandler(radioButton.CheckedEvent,new RoutedEventHandler(radioButton_Click); - динамическая привязка 

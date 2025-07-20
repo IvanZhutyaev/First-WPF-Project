@@ -21,14 +21,13 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    
 
-    private void RadioButton_Click(object sender, RoutedEventArgs e)
+
+    private void TextBox_KeyDown(object sender, KeyEventArgs e)
     {
-        RadioButton selectedRadio = (RadioButton)e.Source;
-        textBlock1.Text="Вы выбрали:"+selectedRadio.Content.ToString();
-
+        textBlock1.Text += e.Key.ToString();
     }
 
-   
+
+
 }

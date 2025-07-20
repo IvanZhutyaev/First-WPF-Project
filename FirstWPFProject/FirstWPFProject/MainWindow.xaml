@@ -7,21 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="400">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" VerticalAlignment="Center" >
-            <StackPanel x:Name="menuSelector" Grid.Column="0" RadioButton.Checked="RadioButton_Click">
-                <RadioButton GroupName="menu" Content="Салат Оливье"/>
-                <RadioButton GroupName="menu" Content="Котлета по-киевски"/>
-
-                <RadioButton GroupName="menu" Content="Пицца с овощами"/>
-                <RadioButton GroupName="menu" Content="Мясной рулет"/>
-            </StackPanel>
-            <TextBlock x:Name="textBlock1" Grid.Column="1" Padding="5"/>
-            
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel >
+            <TextBox KeyDown="TextBox_KeyDown"/>
+        </DockPanel>
+        <TextBlock x:Name="textBlock1" Grid.Row="1" />
     </Grid>
-      
+
+
 </Window>
+    
