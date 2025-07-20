@@ -21,14 +21,13 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    void acceptButton_Click(object sender, RoutedEventArgs e)
-    {
-        MessageBox.Show(textBlock.Text);
-    }
+    
 
-    void escButton_Click(object sender, RoutedEventArgs e)
+    private void Control_MouseDown(object sender, MouseEventArgs e)
     {
-        MessageBox.Show("ГАЛЯ ОТМЕНА!!!");
-        textBlock.Text = "";
+        textBlock1.Text = textBlock1.Text + Name;
+        textBlock2.Text = textBlock1.Text + Name;
+        textBlock3.Text = textBlock1.Text + Name;
+
     }
 }

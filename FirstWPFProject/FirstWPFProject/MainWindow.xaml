@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
-    
-      <StackPanel>
-          <TextBox x:Name="textBlock" Background="Aqua" Height="150" Text="Hello World!" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
-          <Button x:Name="acceptButton" Content="OK" IsDefault="True" Click="acceptButton_Click" Height="55"/>
-          <Button x:Name="escButton" Content="Exit" IsCancel="True" Click="escButton_Click" Height="55"/>
+        Title="MainWindow" Height="250" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" PreviewMouseDown="Control_MouseDown">
+            <Button x:Name="button1" Width="80" Height="50" PreviewMouseDown="Control_MouseDown" Margin="10">
+                <Ellipse Width="30" Height ="30" Fill="Red" PreviewMouseDown="Control_MouseDown" />
+            </Button>
+            <TextBlock x:Name="textBlock1" Grid.Column="1" Padding="5"/>
             
-      </StackPanel>
+        </StackPanel>
+    </Grid>
+      
 </Window>
