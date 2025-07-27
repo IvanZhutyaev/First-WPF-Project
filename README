@@ -143,3 +143,15 @@ XAML:
 <Grid>
     <Button Content="Click me!!!" Width="200" Height="200" Command="local:CustomCommands.TestMes"/>
 </Grid>
+
+
+Создали автоматически:
+private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+{
+    MessageBox.Show("Hello from command");
+}
+
+private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+{
+    e.CanExecute = true;
+}
