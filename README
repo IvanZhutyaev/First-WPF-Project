@@ -122,3 +122,24 @@ CanExecutrChanged - вызывается, если изменяется сост
 5)MediaCommands - команды для управления мультимедиа
 6)SystemCommands - системные команды
 7)RibbonCommands - команды ленты панели
+
+Example: - создание кастомной команды
+
+C#:
+public static class CustomCommands
+{
+    public static readonly RoutedUICommand TestMes = new RoutedUICommand(
+        "Test Message", "TestMes", typeof(CustomCommands), new InputGestureCollection
+        {
+            new KeyGesture(Key.C, ModifierKeys.Control)
+        });
+}
+
+XAML:
+<Window.CommandBindings>
+    <CommandBinding Executed="CommandBinding_Executed" CanExecute="CommandBinding_CanExecute" Command="local:CustomCommands.TestMes"/>
+</Window.CommandBindings>
+
+<Grid>
+    <Button Content="Click me!!!" Width="200" Height="200" Command="local:CustomCommands.TestMes"/>
+</Grid>
