@@ -22,23 +22,21 @@ public partial class MainWindow : Window
     }
 
 
-
-    private void TextBox_KeyDown(object sender, KeyEventArgs e)
+    private void TetxBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
     {
-        if (e.Key == Key.Back)
+        int val;
+        if(!Int32.TryParse(e.Text, out val) && e.Text != "-")
         {
-            
-            textBlock1.Text = textBlock1.Text.Substring(0, e.Key.ToString().Length - 1); ;
+            e.Handled = true;
         }
-        else
-        {
-            textBlock1.Text += e.Key.ToString();
-            
-        }
-        
-        
     }
 
-
+    private void TetxBox_PreviewKeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.Key==Key.Space)
+        {
+            e.Handled = true;
+        }
+    }
 
 }

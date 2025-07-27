@@ -12,7 +12,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <DockPanel >
-            <TextBox PreviewKeyDown="TextBox_KeyDown"/>
+            <TextBox PreviewKeyDown="TetxBox_PreviewKeyDown" PreviewTextInput="TetxBox_PreviewTextInput"/>
         </DockPanel>
         <TextBlock x:Name="textBlock1" Grid.Row="1" />
     </Grid>
