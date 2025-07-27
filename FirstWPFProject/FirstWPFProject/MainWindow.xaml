@@ -6,19 +6,13 @@
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="400">
-    <DockPanel>
-        <Menu DockPanel.Dock="Top" MinHeight="25">
-            <MenuItem Header="File" />
-            <MenuItem Header="Edit" >
-                <MenuItem Header="Copy" CommandTarget="{Binding ElementName=txtBox}" Command="Copy"/>
-                <MenuItem Header="Paste" CommandTarget="{Binding ElementName=txtBox}" Command="Paste"/>
+    <Window.CommandBindings>
+        <CommandBinding Executed="CommandBinding_Executed" CanExecute="CommandBinding_CanExecute" Command="local:CustomCommands.TestMes"/>
+    </Window.CommandBindings>
 
-            </MenuItem>
-
-
-        </Menu>
-        <TextBox x:Name="txtBox"/>
-    </DockPanel>
+    <Grid>
+        <Button Content="Click me!!!" Width="200" Height="200" Command="local:CustomCommands.TestMes"/>
+    </Grid>
 
 </Window>
     

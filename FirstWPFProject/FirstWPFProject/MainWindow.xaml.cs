@@ -39,4 +39,13 @@ public partial class MainWindow : Window
         }
     }
 
+    private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+    {
+        MessageBox.Show("Hello from command");
+    }
+
+    private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+    {
+        e.CanExecute = true;
+    }
 }
