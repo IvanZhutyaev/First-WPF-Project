@@ -6,17 +6,19 @@
         xmlns:local="clr-namespace:FirstWPFProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="400">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <DockPanel >
-            <TextBox PreviewKeyDown="TetxBox_PreviewKeyDown" PreviewTextInput="TetxBox_PreviewTextInput"/>
-        </DockPanel>
-        <TextBlock x:Name="textBlock1" Grid.Row="1" />
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" MinHeight="25">
+            <MenuItem Header="File" />
+            <MenuItem Header="Edit" >
+                <MenuItem Header="Copy" CommandTarget="{Binding ElementName=txtBox}" Command="Copy"/>
+                <MenuItem Header="Paste" CommandTarget="{Binding ElementName=txtBox}" Command="Paste"/>
 
+            </MenuItem>
+
+
+        </Menu>
+        <TextBox x:Name="txtBox"/>
+    </DockPanel>
 
 </Window>
     
