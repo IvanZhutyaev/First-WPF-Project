@@ -9,9 +9,9 @@
     <Window.CommandBindings>
         <CommandBinding Executed="CommandBinding_Executed" CanExecute="CommandBinding_CanExecute" Command="local:CustomCommands.TestMes"/>
     </Window.CommandBindings>
-
     <Grid>
-        <Button Content="Click me!!!" Width="200" Height="200" Command="local:CustomCommands.TestMes"/>
+        <TextBox x:Name="txtBox"  Height="20" Width="300" VerticalAlignment="Top" Margin="10"/>
+        <Button Height="30" Width="100" Command="local:CustomCommands.TestMes">Click me :-(</Button>
     </Grid>
 
 </Window>

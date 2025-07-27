@@ -41,7 +41,18 @@ public partial class MainWindow : Window
 
     private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
     {
-        MessageBox.Show("Hello from command");
+        char text = txtBox.Text[0];
+        if(char.IsLetter(text))
+            MessageBox.Show("Буква");
+        else if(char.IsDigit(text))
+            MessageBox.Show("Цифра");
+        else if (char.IsSymbol(text)|| char.IsPunctuation(text))
+            MessageBox.Show($"Symbol: {text}");
+        
+
+
+
+
     }
 
     private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
